@@ -89,8 +89,8 @@ function Footer({ go }) {
           </div>
           <div>
             <h4 style={{ fontSize: 13, letterSpacing: '.16em', color: 'var(--txt-dim)', textTransform: 'uppercase', marginBottom: 18 }}>Contato</h4>
-            <p style={{ color: 'var(--txt-dim)', fontSize: 15, padding: '7px 0' }}>contato@ant.company</p>
-            <p style={{ color: 'var(--txt-dim)', fontSize: 15, padding: '7px 0' }}>@ant.company</p>
+            <p style={{ color: 'var(--txt-dim)', fontSize: 15, padding: '7px 0' }}>jonas.business0142@gmail.comcontato@ant.company</p>
+            <p style={{ color: 'var(--txt-dim)', fontSize: 15, padding: '7px 0' }}>@a.n.t.company</p>
             <button className="btn btn-gold" style={{ marginTop: 16, padding: '11px 20px', fontSize: 13 }} onClick={() => go('contato')}>Agendar diagnóstico</button>
           </div>
         </div>
