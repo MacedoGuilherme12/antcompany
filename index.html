@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A.N.T. Company — Estratégia · Comercial · Tecnologia</title>
+<link rel="stylesheet" href="ant/tokens.css" />
+<style>
+  /* Animação dos cards flutuantes (Hero split) */
+  @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+  .floatcard { animation: floaty 6s ease-in-out infinite; }
+
+  /* Hovers de card */
+  .pilar-card:hover { border-color: var(--line); transform: translateY(-5px); box-shadow: 0 24px 60px -30px rgba(212,175,55,.35); }
+  .svc-card:hover { border-color: var(--line); transform: translateY(-5px); box-shadow: 0 24px 60px -30px rgba(0,0,0,.7); }
+  .svc-card:hover .svc-arrow { opacity: 1 !important; color: var(--dourado); transform: translateX(4px); }
+
+  select option { background: var(--grafite); color: var(--branco); }
+
+  /* Responsivo */
+  @media (max-width: 900px) {
+    .wrap { padding: 0 22px; }
+    .nav-links { display: none !important; }
+    .nav-burger { display: inline-flex !important; }
+    .nav-mobile { display: flex !important; }
+    [style*="grid-template-columns: 1.05fr"], 
+    [style*="grid-template-columns: repeat(3,1fr)"],
+    [style*="grid-template-columns: repeat(4,1fr)"],
+    [style*="grid-template-columns: 1fr 1.2fr"],
+    [style*="grid-template-columns: 1fr 1.4fr"],
+    [style*="grid-template-columns: 1.4fr 1fr 1fr"],
+    [style*="grid-template-columns: repeat(2,1fr)"],
+    [style*="grid-template-columns: 1fr 1fr"] { grid-template-columns: 1fr !important; }
+  }
+  @media (max-width: 600px) {
+    h1 { letter-spacing: -.01em; }
+  }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="ant/tweaks-panel.jsx"></script>
+<script type="text/babel" src="ant/icons.jsx"></script>
+<script type="text/babel" src="ant/logo-bg.jsx"></script>
+<script type="text/babel" src="ant/home.jsx"></script>
+<script type="text/babel" src="ant/sections.jsx"></script>
+<script type="text/babel" src="ant/pages.jsx"></script>
+<script type="text/babel" src="ant/app.jsx"></script>
+</body>
+</html>
