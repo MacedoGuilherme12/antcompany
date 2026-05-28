@@ -1,5 +1,7 @@
 /* global React, Hero, Eyebrow, Icon, NetworkBG, Peaks */
 
+const WHATSAPP_URL = 'https://wa.me/5548996795678';
+
 /* ===================== Faixa de conceito ===================== */
 function ConceptBand() {
   return (
@@ -159,7 +161,9 @@ function CTABand({ go }) {
           <button className="btn btn-gold" onClick={() => go('contato')}>
             Agendar diagnóstico <span className="arrow"><Icon name="arrow" size={17} stroke="#0B0B0B" /></span>
           </button>
-          <button className="btn btn-ghost" onClick={() => go('contato')}><Icon name="whatsapp" size={17} /> Falar no WhatsApp</button>
+          <a className="btn btn-ghost" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+            <Icon name="whatsapp" size={17} /> Falar no WhatsApp
+          </a>
         </div>
       </div>
     </section>

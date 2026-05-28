@@ -1,6 +1,8 @@
 /* global React, Eyebrow, Icon, NetworkBG, Peaks, ServicesGrid, SERVICOS, PASSOS, CTABand */
 const { useState: useStateP } = React;
 
+const CONTACT_WHATSAPP_URL = 'https://wa.me/5548996795678';
+
 /* Cabeçalho padrão das páginas internas */
 function PageHero({ eyebrow, title, sub }) {
   return (
@@ -173,7 +175,9 @@ function ContatoPage() {
               </div>
             ))}
             <div style={{ marginTop: 30 }}>
-              <button className="btn btn-ghost" onClick={() => { }}><Icon name="whatsapp" size={18} /> Prefiro o WhatsApp</button>
+              <a className="btn btn-ghost" href={CONTACT_WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                <Icon name="whatsapp" size={18} /> Prefiro o WhatsApp
+              </a>
             </div>
           </div>
 

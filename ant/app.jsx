@@ -10,6 +10,11 @@ const NAV = [
   { id: 'contato', label: 'Contato' },
 ];
 
+const SOCIAL_LINKS = {
+  instagram: 'https://www.instagram.com/a.n.t.company/',
+  whatsapp: 'https://wa.me/5548996795678',
+};
+
 function Navbar({ page, go, solid }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -71,7 +76,9 @@ function Footer({ go }) {
             </p>
             <div style={{ display: 'flex', gap: 10, marginTop: 24 }}>
               {['instagram', 'whatsapp'].map((ic) => (
-                <a key={ic} style={{ width: 42, height: 42, borderRadius: 6, border: '1px solid var(--line-soft)',
+                <a key={ic} href={SOCIAL_LINKS[ic]} target="_blank" rel="noopener noreferrer"
+                  aria-label={ic === 'instagram' ? 'Instagram da A.N.T. Company' : 'Enviar mensagem no WhatsApp'}
+                  style={{ width: 42, height: 42, borderRadius: 6, border: '1px solid var(--line-soft)',
                   display: 'grid', placeItems: 'center', cursor: 'pointer', transition: 'all .3s' }}
                   onMouseEnter={(e) => e.currentTarget.style.borderColor = 'var(--dourado)'}
                   onMouseLeave={(e) => e.currentTarget.style.borderColor = 'var(--line-soft)'}><Icon name={ic} size={20} /></a>
@@ -90,7 +97,10 @@ function Footer({ go }) {
           <div>
             <h4 style={{ fontSize: 13, letterSpacing: '.16em', color: 'var(--txt-dim)', textTransform: 'uppercase', marginBottom: 18 }}>Contato</h4>
             <p style={{ color: 'var(--txt-dim)', fontSize: 15, padding: '7px 0' }}>jonas.business0142@gmail.comcontato@ant.company</p>
-            <p style={{ color: 'var(--txt-dim)', fontSize: 15, padding: '7px 0' }}>@a.n.t.company</p>
+            <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer"
+              style={{ display: 'block', color: 'var(--txt-dim)', fontSize: 15, padding: '7px 0', textDecoration: 'none' }}
+              onMouseEnter={(e) => e.currentTarget.style.color = 'var(--dourado)'}
+              onMouseLeave={(e) => e.currentTarget.style.color = 'var(--txt-dim)'}>@a.n.t.company</a>
             <button className="btn btn-gold" style={{ marginTop: 16, padding: '11px 20px', fontSize: 13 }} onClick={() => go('contato')}>Agendar diagnóstico</button>
           </div>
         </div>
