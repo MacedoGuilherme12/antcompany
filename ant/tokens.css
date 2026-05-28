@@ -1,0 +1,115 @@
+/* ===== A.N.T. Company — Design Tokens ===== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  /* Paleta de marca */
+  --preto:    #0B0B0B;
+  --grafite:  #1A1A1A;
+  --grafite2: #131313;
+  --branco:   #F5F5F5;
+  --dourado:  #D4AF37;
+  --dourado-2:#E9C95C;
+  --azul:     #0D1B2A;
+
+  /* Derivados */
+  --line:        rgba(212,175,55,.22);
+  --line-soft:   rgba(245,245,245,.08);
+  --txt:         #F5F5F5;
+  --txt-dim:     rgba(245,245,245,.62);
+  --txt-faint:   rgba(245,245,245,.40);
+  --card:        #121212;
+  --card-2:      #161616;
+
+  --gold-grad: linear-gradient(135deg, var(--dourado-2) 0%, var(--dourado) 55%, #b8932b 100%);
+
+  --maxw: 1200px;
+  --r: 4px;
+  --ease: cubic-bezier(.2,.7,.2,1);
+
+  --f-head: 'Montserrat', sans-serif;
+  --f-body: 'Inter', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--f-body);
+  background: var(--preto);
+  color: var(--txt);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.55;
+  overflow-x: hidden;
+}
+::selection { background: var(--dourado); color: var(--preto); }
+
+h1,h2,h3,h4 { font-family: var(--f-head); font-weight: 800; line-height: 1.04; letter-spacing: -.01em; }
+
+/* Eyebrow / label dourado wide-tracked, como no guia */
+.eyebrow {
+  font-family: var(--f-head);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--dourado);
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+.eyebrow::before {
+  content: "";
+  width: 34px; height: 1px;
+  background: var(--dourado);
+  opacity: .8;
+}
+.eyebrow.center::after {
+  content: "";
+  width: 34px; height: 1px;
+  background: var(--dourado);
+  opacity: .8;
+}
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 32px; width: 100%; }
+
+.gold-text { color: var(--dourado); }
+.dim { color: var(--txt-dim); }
+
+/* Botões */
+.btn {
+  font-family: var(--f-head);
+  font-weight: 700;
+  font-size: 13.5px;
+  letter-spacing: .04em;
+  border: none;
+  cursor: pointer;
+  padding: 15px 26px;
+  border-radius: var(--r);
+  display: inline-flex; align-items: center; gap: 10px;
+  transition: all .35s var(--ease);
+  text-decoration: none;
+}
+.btn-gold {
+  background: var(--gold-grad);
+  color: var(--preto);
+  box-shadow: 0 8px 30px -10px rgba(212,175,55,.5);
+}
+.btn-gold:hover { transform: translateY(-2px); box-shadow: 0 14px 40px -10px rgba(212,175,55,.65); }
+.btn-ghost {
+  background: transparent;
+  color: var(--branco);
+  border: 1px solid var(--line);
+}
+.btn-ghost:hover { border-color: var(--dourado); color: var(--dourado); }
+
+.btn .arrow { transition: transform .35s var(--ease); }
+.btn:hover .arrow { transform: translateX(4px); }
+
+/* Reveal on scroll */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+.reveal.in { opacity: 1; transform: none; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--preto); }
+::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: var(--dourado); }
