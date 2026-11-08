@@ -1,202 +1,236 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>A.N.T. Company — Estratégia · Comercial · Tecnologia</title>
-<link rel="stylesheet" href="ant/tokens.css" />
-<style>
-  /* Animação dos cards flutuantes (Hero split) */
-  @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
-  .floatcard { animation: floaty 6s ease-in-out infinite; }
-
-  /* Hovers de card */
-  .pilar-card:hover { border-color: var(--line); transform: translateY(-5px); box-shadow: 0 24px 60px -30px rgba(212,175,55,.35); }
-  .svc-card:hover { border-color: var(--line); transform: translateY(-5px); box-shadow: 0 24px 60px -30px rgba(0,0,0,.7); }
-  .svc-card:hover .svc-arrow { opacity: 1 !important; color: var(--dourado); transform: translateX(4px); }
-
-  img, svg, canvas { max-width: 100%; }
-  input, select, textarea { max-width: 100%; }
-  p, a, span, h1, h2, h3, h4 { overflow-wrap: anywhere; }
-
-  select option { background: var(--grafite); color: var(--branco); }
-
-  /* Responsivo */
-  @media (max-width: 1100px) {
-    [style*="grid-template-columns: repeat(4,1fr)"] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
-    [style*="grid-template-columns: repeat(4, 1fr)"] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
-    [style*="grid-template-columns: repeat(3,1fr)"] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
-    [style*="grid-template-columns: repeat(3, 1fr)"] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
-    [style*="grid-template-columns: 1.4fr 1fr 1fr"] { grid-template-columns: 1fr 1fr !important; }
-  }
-
-  @media (max-width: 900px) {
-    .wrap { padding: 0 22px; }
-    .nav-links { display: none !important; }
-    .nav-burger { display: inline-flex !important; }
-    .nav-mobile { display: flex !important; }
-    [style*="grid-template-columns: 1.05fr"],
-    [style*="grid-template-columns: repeat(3,1fr)"],
-    [style*="grid-template-columns: repeat(3, 1fr)"],
-    [style*="grid-template-columns: repeat(4,1fr)"],
-    [style*="grid-template-columns: repeat(4, 1fr)"],
-    [style*="grid-template-columns: 1fr 1.2fr"],
-    [style*="grid-template-columns: 1fr 1.4fr"],
-    [style*="grid-template-columns: 1fr auto"],
-    [style*="grid-template-columns: 1.4fr 1fr 1fr"],
-    [style*="grid-template-columns: repeat(2,1fr)"],
-    [style*="grid-template-columns: repeat(2, 1fr)"],
-    [style*="grid-template-columns: 1fr 1fr"] { grid-template-columns: 1fr !important; }
-
-    [style*="min-height: 92vh"],
-    [style*="min-height: 90vh"],
-    [style*="min-height: 88vh"] { min-height: auto !important; }
-
-    [style*="padding: 110px 0"],
-    [style*="padding: 100px 0"],
-    [style*="padding: 90px 0"] { padding: 72px 0 !important; }
-
-    [style*="padding: 120px 0"] { padding: 82px 0 !important; }
-    [style*="padding-top: 150px"] { padding-top: 124px !important; }
-
-    [style*="gap: 60px"],
-    [style*="gap: 50px"],
-    [style*="gap: 40px"] { gap: 30px !important; }
-
-    [style*="height: 460px"] { height: 360px !important; }
-    [style*="height: 280px"] { height: 220px !important; }
-
-    [style*="order: 2"],
-    [style*="order: 1"] { order: initial !important; }
-
-    [style*="padding: 0 26px"],
-    [style*="padding: 0 24px"],
-    [style*="padding: 0 30px"] {
-      padding: 20px 0 !important;
-      border-left: none !important;
-      border-top: 1px solid var(--line-soft);
-    }
-
-    [style*="padding: 0 26px"]:first-child,
-    [style*="padding: 0 24px"]:first-child,
-    [style*="padding: 0 30px"]:first-child { border-top: none; }
-
-    .floatcard {
-      min-width: 168px !important;
-      max-width: calc(100vw - 64px);
-      padding: 12px 14px !important;
-    }
-  }
-
-  @media (max-width: 600px) {
-    h1 { letter-spacing: -.01em; }
-    h2 { line-height: 1.1; }
-
-    .wrap { padding: 0 18px; }
-    .eyebrow {
-      gap: 9px;
-      font-size: 10.5px;
-      letter-spacing: .18em;
-      max-width: 100%;
-    }
-    .eyebrow::before,
-    .eyebrow.center::after { width: 20px; }
-
-    .btn {
-      width: 100%;
-      justify-content: center;
-      padding: 14px 18px;
-      min-height: 48px;
-      text-align: center;
-    }
-
-    [style*="display: flex"][style*="gap: 14px"] { width: 100%; }
-    [style*="justify-content: center"][style*="gap: 14px"] { width: 100%; }
-
-    [style*="paddingTop: 90px"],
-    [style*="padding-top: 90px"] { padding-top: 116px !important; }
-
-    [style*="paddingTop: 110px"],
-    [style*="padding-top: 110px"],
-    [style*="paddingTop: 120px"],
-    [style*="padding-top: 120px"] { padding-top: 112px !important; }
-
-    [style*="paddingBottom: 80px"],
-    [style*="padding-bottom: 80px"],
-    [style*="paddingBottom: 70px"],
-    [style*="padding-bottom: 70px"] { padding-bottom: 58px !important; }
-
-    [style*="padding: 38px 32px"],
-    [style*="padding: 34px 32px"],
-    [style*="padding: 30px 26px"] { padding: 26px 22px !important; }
-
-    [style*="padding: 38px"] { padding: 24px 18px !important; }
-    [style*="padding: 54px 0"] { padding: 36px 0 !important; }
-    [style*="padding: 80px 0 110px"] { padding: 58px 0 78px !important; }
-
-    [style*="font-size: 18px"] { font-size: 16px !important; }
-    [style*="font-size: 17.5px"],
-    [style*="font-size: 16.5px"] { font-size: 15.5px !important; }
-
-    [style*="height: 360px"] { height: 300px !important; }
-    [style*="height: 220px"] { height: 190px !important; }
-
-    .floatcard {
-      position: relative !important;
-      top: auto !important;
-      left: auto !important;
-      margin: 12px 0 !important;
-      min-width: 0 !important;
-      width: 100%;
-      animation: none;
-    }
-
-    [style*="height: 460px"],
-    [style*="height: 360px"] {
-      height: auto !important;
-      min-height: 0 !important;
-      padding: 10px 0 !important;
-    }
-
-    footer [style*="justify-content: space-between"] {
-      align-items: flex-start !important;
-      flex-direction: column;
-    }
-
-    .twk-panel {
-      left: 12px !important;
-      right: 12px !important;
-      bottom: 12px !important;
-      width: auto !important;
-      max-height: calc(100vh - 24px) !important;
-      transform: none !important;
-    }
-  }
-
-  @media (max-width: 420px) {
-    .wrap { padding: 0 16px; }
-    .eyebrow::before,
-    .eyebrow.center::after { display: none; }
-    [style*="font-size: clamp(40px, 7vw, 92px)"] { font-size: 36px !important; }
-    [style*="font-size: clamp(38px, 5.4vw, 76px)"] { font-size: 34px !important; }
-    [style*="font-size: clamp(44px, 9vw, 140px)"] { font-size: 39px !important; }
-    [style*="font-size: clamp(34px,5.5vw,72px)"] { font-size: 32px !important; }
-  }
-</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A.N.T. Company | Estratégia, comercial e tecnologia para pequenas e médias empresas</title>
+<meta name="description" content="Conectamos estratégia, processos comerciais e tecnologia para pequenas e médias empresas crescerem de forma previsível. Agende um diagnóstico gratuito de 30 minutos.">
+<meta name="theme-color" content="#0F1C2B">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="A.N.T. Company">
+<meta property="og:title" content="A.N.T. Company: transformamos crescimento em sistema">
+<meta property="og:description" content="Estratégia, comercial e tecnologia conectados para pequenas e médias empresas. Agende um diagnóstico gratuito.">
+<meta property="og:url" content="https://antcompany-jade.vercel.app/">
+<link rel="canonical" href="https://antcompany-jade.vercel.app/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div id="root"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.42.25-.69.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.37l-.36-.22-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45h.01c6.55 0 11.89-5.34 11.89-11.89a11.82 11.82 0 0 0-3.48-8.41"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-ant" viewBox="0 0 120 120" fill="none">
+    <path d="M53 30C46 22 42 16 37 10M67 30c7-8 11-14 16-20" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/>
+    <circle cx="35" cy="8" r="4.2" fill="currentColor"/><circle cx="85" cy="8" r="4.2" fill="currentColor"/>
+    <circle cx="60" cy="42" r="15" fill="currentColor"/>
+    <path d="M24 98 47 56l13 22 13-22 23 42" stroke="currentColor" stroke-width="8.5" stroke-linejoin="round" stroke-linecap="round"/>
+  </symbol>
+</svg>
 
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
-<script type="text/babel" src="ant/tweaks-panel.jsx"></script>
-<script type="text/babel" src="ant/icons.jsx"></script>
-<script type="text/babel" src="ant/logo-bg.jsx"></script>
-<script type="text/babel" src="ant/home.jsx"></script>
-<script type="text/babel" src="ant/sections.jsx"></script>
-<script type="text/babel" src="ant/pages.jsx"></script>
-<script type="text/babel" src="ant/app.jsx"></script>
+<header class="top">
+  <div class="wrap top__in">
+    <a class="logo" href="#inicio" aria-label="A.N.T. Company, início">
+      <svg class="logo__mark" aria-hidden="true"><use href="#i-ant"/></svg>
+      <span class="logo__name">A.N.T.<small>Company</small></span>
+    </a>
+    <button class="menu" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Seções">
+      <a href="#servicos">Serviços</a>
+      <a href="#metodo">Método</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato" class="nav__cta">Agendar diagnóstico</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <!-- Abertura -->
+  <section class="hero" id="inicio">
+    <div class="wrap hero__grid">
+      <div>
+        <h1 class="hero__title">Transformamos crescimento em sistema.</h1>
+        <p class="hero__lead">Conectamos estratégia, processos comerciais e tecnologia para pequenas e médias empresas que querem estruturar melhor, não só fazer mais.</p>
+        <div class="hero__ctas">
+          <a class="btn btn--ocre" href="#contato">Agendar diagnóstico gratuito</a>
+          <a class="btn btn--line" href="https://wa.me/5548996795678" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Falar no WhatsApp</a>
+        </div>
+      </div>
+      <p class="hero__aside">Estratégia, comercial e tecnologia trabalhando juntos, para o dono sair da operação e o crescimento deixar de depender de esforço extra.</p>
+    </div>
+  </section>
+
+  <!-- Conceito + trilha A.N.T. -->
+  <section class="sec" id="pilares" aria-labelledby="t-pilares">
+    <div class="wrap">
+      <p class="statement">A.N.T. não é sobre fazer mais. É sobre estruturar melhor.</p>
+      <p class="lead">Somos uma central de inteligência empresarial: conectamos pessoas, processos e tecnologia para gerar resultado real e dar ao dono liberdade para conduzir o negócio com clareza.</p>
+
+      <h2 class="h2" id="t-pilares">Os três pilares do nome</h2>
+      <div class="trail" id="trail">
+        <svg class="trail__path" viewBox="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true"><path d="M40 60 C 200 10, 320 110, 500 60 S 800 10, 960 60"/></svg>
+        <ol class="trail__list">
+        <li class="trail__stop">
+          <span class="trail__letter" aria-hidden="true">A</span>
+          <h3>Adaptar</h3>
+          <p>Entender o mercado, ler os dados e ajustar a estratégia ao momento real do negócio, sem achismo.</p>
+        </li>
+        <li class="trail__stop">
+          <span class="trail__letter" aria-hidden="true">N</span>
+          <h3>Conectar</h3>
+          <p>Ligar pessoas, processos e tecnologia num só sistema, acabando com ruído e retrabalho.</p>
+        </li>
+        <li class="trail__stop">
+          <span class="trail__letter" aria-hidden="true">T</span>
+          <h3>Prosperar</h3>
+          <p>Crescer de forma sustentável, previsível e escalável, com liberdade para o time e para o dono.</p>
+        </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section class="sec sec--line" id="servicos" aria-labelledby="t-servicos">
+    <div class="wrap">
+      <h2 class="h2" id="t-servicos">Quatro frentes, um só sistema</h2>
+      <p class="lead">Você não contrata peças soltas. Cada entrega se liga ao seu funil e é medida por resultado, não por vaidade.</p>
+      <div class="svc">
+        <article class="svc__item">
+          <h3>Estratégia e consultoria</h3>
+          <p>Diagnóstico do comercial, metas e o roteiro para o negócio crescer de forma previsível.</p>
+          <ul class="tags"><li>Diagnóstico</li><li>Metas e indicadores</li><li>Processos</li></ul>
+        </article>
+        <article class="svc__item">
+          <h3>Automação comercial</h3>
+          <p>CRM, funis e robôs que respondem, qualificam e acompanham os contatos enquanto você cuida do resto.</p>
+          <ul class="tags"><li>CRM e funis</li><li>Chatbots</li><li>Integrações</li></ul>
+        </article>
+        <article class="svc__item">
+          <h3>Gestão de Instagram e redes</h3>
+          <p>Conteúdo com estratégia, identidade e presença que constroem autoridade, não só curtidas.</p>
+          <ul class="tags"><li>Linha editorial</li><li>Design de conteúdo</li><li>Venda pelas redes</li></ul>
+        </article>
+        <article class="svc__item">
+          <h3>Marca e conteúdo</h3>
+          <p>Posicionamento, narrativa e identidade que fazem a sua marca ser lembrada.</p>
+          <ul class="tags"><li>Posicionamento</li><li>Identidade</li><li>Narrativa</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Método -->
+  <section class="sec sec--ink" id="metodo" aria-labelledby="t-metodo">
+    <div class="wrap">
+      <h2 class="h2" id="t-metodo">Do improviso a um comercial que roda sozinho</h2>
+      <p class="lead">O método A.N.T. em quatro etapas, nesta ordem.</p>
+      <ol class="steps">
+        <li><h3>Diagnóstico</h3><p>Olhamos de perto o comercial, o marketing e a operação para mapear gargalos e oportunidades.</p></li>
+        <li><h3>Estrutura</h3><p>Desenhamos os processos, as metas e a organização comercial de que o negócio precisa.</p></li>
+        <li><h3>Automação</h3><p>Implantamos CRM, funis e integrações que tiram o operacional das suas costas.</p></li>
+        <li><h3>Escala</h3><p>Ajustamos com base nos dados e aceleramos o crescimento de forma previsível e sustentável.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section class="sec" id="sobre" aria-labelledby="t-sobre">
+    <div class="wrap about">
+      <div>
+        <h2 class="h2" id="t-sobre">Estruturamos empresas para crescer com liberdade</h2>
+        <p class="lead lead--tight">A A.N.T. nasceu para resolver um problema comum nas pequenas e médias empresas: muito esforço e pouco sistema. Trabalhamos como formigas, com organização, conexão e foco coletivo no que faz a empresa prosperar.</p>
+        <p class="body">Conectamos estratégia, processos comerciais e tecnologia num único sistema. Menos achismo, menos operação manual, mais previsibilidade. O resultado é um negócio que cresce sem depender do dono apagando incêndio, com dados, processos claros e automação trabalhando o dia inteiro.</p>
+      </div>
+      <div>
+        <h3 class="h3">Como pensamos e agimos</h3>
+        <dl class="values">
+          <div><dt>Firmes</dt><dd>Falamos com clareza e segurança sobre o que realmente importa.</dd></div>
+          <div><dt>Estratégicos</dt><dd>Inteligência de negócio e visão de longo prazo em cada decisão.</dd></div>
+          <div><dt>Humanos</dt><dd>Gente que entende de gente para gerar resultado real.</dd></div>
+          <div><dt>Transformadores</dt><dd>Geramos impacto, liberdade e evolução para quem trabalha com a gente.</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section class="sec sec--line" id="contato" aria-labelledby="t-contato">
+    <div class="wrap contact">
+      <div>
+        <h2 class="h2" id="t-contato">Agende seu diagnóstico</h2>
+        <p class="lead lead--tight">30 minutos, sem custo. Você sai com um mapa claro dos gargalos e das oportunidades do seu comercial.</p>
+        <h3 class="h3">O que acontece depois</h3>
+        <ol class="after">
+          <li><strong>Retorno em até 24 horas.</strong> A gente entra em contato para achar o melhor horário.</li>
+          <li><strong>Diagnóstico ao vivo.</strong> Mapeamos juntos os gargalos do seu comercial e do marketing.</li>
+          <li><strong>Plano de ação.</strong> Você recebe os próximos passos, com ou sem a A.N.T.</li>
+        </ol>
+        <ul class="direct">
+          <li><a href="https://wa.me/5548996795678" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>(48) 99679-5678</a></li>
+          <li><a href="https://www.instagram.com/a.n.t.company/" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg>@a.n.t.company</a></li>
+          <li><a href="mailto:jonas.business0142@gmail.com">jonas.business0142@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <form class="form" id="form" novalidate>
+        <div class="field">
+          <label for="f-nome">Nome</label>
+          <input id="f-nome" name="nome" autocomplete="name" required>
+          <p class="field__err" id="e-nome"></p>
+        </div>
+        <div class="field">
+          <label for="f-empresa">Empresa</label>
+          <input id="f-empresa" name="empresa" autocomplete="organization" required>
+          <p class="field__err" id="e-empresa"></p>
+        </div>
+        <div class="field">
+          <label for="f-email">E-mail</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required>
+          <p class="field__err" id="e-email"></p>
+        </div>
+        <div class="field">
+          <label for="f-whats">WhatsApp <span class="opt">(opcional)</span></label>
+          <input id="f-whats" name="whats" type="tel" autocomplete="tel" inputmode="tel">
+        </div>
+        <div class="field field--full">
+          <label for="f-fat">Faturamento mensal <span class="opt">(opcional)</span></label>
+          <select id="f-fat" name="faturamento">
+            <option value="">Prefiro não dizer agora</option>
+            <option>Até R$ 50 mil</option>
+            <option>De R$ 50 mil a R$ 150 mil</option>
+            <option>De R$ 150 mil a R$ 500 mil</option>
+            <option>Acima de R$ 500 mil</option>
+          </select>
+        </div>
+        <div class="field field--full">
+          <label for="f-desafio">Maior desafio hoje <span class="opt">(opcional)</span></label>
+          <textarea id="f-desafio" name="desafio" rows="3" placeholder="Conte rapidamente o que trava o seu crescimento"></textarea>
+        </div>
+        <button class="btn btn--ocre btn--block" type="submit">Pedir diagnóstico pelo WhatsApp</button>
+        <p class="form__note" id="formNote" aria-live="polite">O pedido abre no WhatsApp com os seus dados já escritos. Você revisa e envia.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <a class="logo" href="#inicio" aria-label="A.N.T. Company, voltar ao início">
+      <svg class="logo__mark" aria-hidden="true"><use href="#i-ant"/></svg>
+      <span class="logo__name">A.N.T.<small>Company</small></span>
+    </a>
+    <p>Estratégia, comercial e tecnologia conectados num só lugar.</p>
+    <p class="foot__copy">© <span id="ano">2026</span> A.N.T. Company</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
 </body>
 </html>
