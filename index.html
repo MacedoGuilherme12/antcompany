@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>A.N.T. Company | Estratégia, comercial e tecnologia para pequenas e médias empresas</title>
 <meta name="description" content="Conectamos estratégia, processos comerciais e tecnologia para pequenas e médias empresas crescerem de forma previsível. Agende um diagnóstico gratuito de 30 minutos.">
-<meta name="theme-color" content="#0F1C2B">
+<meta name="theme-color" content="#e8d6a8">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="A.N.T. Company">
@@ -16,7 +16,7 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,500..900&family=Instrument+Sans:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -29,6 +29,15 @@
     <circle cx="60" cy="42" r="15" fill="currentColor"/>
     <path d="M24 98 47 56l13 22 13-22 23 42" stroke="currentColor" stroke-width="8.5" stroke-linejoin="round" stroke-linecap="round"/>
   </symbol>
+  <!-- Formiga vista de cima, andando para a direita (o rotate="auto" vira ela no túnel) -->
+  <symbol id="formiga-desenho" viewBox="-12 -8 24 16" overflow="visible">
+    <g stroke="#d9ae3f" stroke-width="1.1" stroke-linecap="round" fill="none">
+      <path d="M-1 -1.5 L-3 -6 M1 -1.5 L2 -6.5 M0 -1.5 L-.5 -6.2 M-1 1.5 L-3 6 M1 1.5 L2 6.5 M0 1.5 L-.5 6.2"/>
+      <path d="M8 -1.5 L11 -4.5 M8 1.5 L11 4.5"/>
+    </g>
+    <g fill="#d9ae3f"><ellipse cx="-6" cy="0" rx="4.2" ry="3"/><ellipse cx="0" cy="0" rx="2.6" ry="2"/><circle cx="5.2" cy="0" r="2.6"/></g>
+  </symbol>
+  <symbol id="formiga" overflow="visible"><use href="#formiga-desenho" x="-12" y="-8" width="24" height="16"/></symbol>
 </svg>
 
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
@@ -44,80 +53,597 @@
       <a href="#servicos">Serviços</a>
       <a href="#metodo">Método</a>
       <a href="#sobre">Sobre</a>
-      <a href="#contato" class="nav__cta">Agendar diagnóstico</a>
+      <a class="nav__cta" href="#contato">Agendar diagnóstico</a>
     </nav>
   </div>
 </header>
 
 <main id="conteudo">
 
-  <!-- Abertura -->
-  <section class="hero" id="inicio">
+  <!-- Superfície: o dono no esforço; embaixo, o sistema que a A.N.T. monta -->
+  <section class="hero" id="inicio" aria-labelledby="t-hero">
     <div class="wrap hero__grid">
-      <div>
-        <h1 class="hero__title">Transformamos crescimento em sistema.</h1>
+      <h1 class="hero__title" id="t-hero">Transformamos crescimento em sistema.</h1>
+      <div class="hero__side">
         <p class="hero__lead">Conectamos estratégia, processos comerciais e tecnologia para pequenas e médias empresas que querem estruturar melhor, não só fazer mais.</p>
         <div class="hero__ctas">
-          <a class="btn btn--ocre" href="#contato">Agendar diagnóstico gratuito</a>
-          <a class="btn btn--line" href="https://wa.me/5548996795678" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Falar no WhatsApp</a>
+          <a class="btn btn--dark" href="#contato">Agendar diagnóstico gratuito</a>
+          <a class="btn btn--line" data-wa href="https://wa.me/5548996795678" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Falar no WhatsApp</a>
         </div>
       </div>
-      <p class="hero__aside">Estratégia, comercial e tecnologia trabalhando juntos, para o dono sair da operação e o crescimento deixar de depender de esforço extra.</p>
+    </div>
+
+    <figure class="farm">
+      <svg class="farm__svg farm__svg--largo" viewBox="0 0 1200 470" aria-hidden="true" focusable="false">
+      <rect width="1200" height="470" fill="url(#solo-largo)"/>
+      <circle cx="657" cy="39" r="1.2" fill="#4a321d" opacity=".34"/>
+      <circle cx="596" cy="255" r="2.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="434" cy="124" r="1.6" fill="#4a321d" opacity=".34"/>
+      <circle cx="98" cy="148" r="3" fill="#a07a4c" opacity=".26"/>
+      <circle cx="346" cy="461" r="1.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="198" cy="167" r="3" fill="#4a321d" opacity=".26"/>
+      <circle cx="1154" cy="46" r="2.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="713" cy="277" r="3" fill="#4a321d" opacity=".18"/>
+      <circle cx="1134" cy="228" r="1.2" fill="#a07a4c" opacity=".18"/>
+      <circle cx="777" cy="467" r="3" fill="#a07a4c" opacity=".26"/>
+      <circle cx="1064" cy="170" r="3" fill="#4a321d" opacity=".26"/>
+      <circle cx="733" cy="237" r="1.6" fill="#4a321d" opacity=".26"/>
+      <circle cx="886" cy="193" r="3" fill="#4a321d" opacity=".18"/>
+      <circle cx="539" cy="263" r="1.6" fill="#a07a4c" opacity=".26"/>
+      <circle cx="848" cy="464" r="3" fill="#4a321d" opacity=".18"/>
+      <circle cx="100" cy="80" r="1.6" fill="#a07a4c" opacity=".18"/>
+      <circle cx="997" cy="94" r="2.2" fill="#4a321d" opacity=".18"/>
+      <circle cx="503" cy="180" r="2.2" fill="#4a321d" opacity=".18"/>
+      <circle cx="548" cy="411" r="3" fill="#a07a4c" opacity=".26"/>
+      <circle cx="473" cy="232" r="3" fill="#4a321d" opacity=".18"/>
+      <circle cx="81" cy="106" r="1.6" fill="#a07a4c" opacity=".18"/>
+      <circle cx="721" cy="57" r="1.6" fill="#4a321d" opacity=".34"/>
+      <circle cx="1139" cy="292" r="1.2" fill="#a07a4c" opacity=".18"/>
+      <circle cx="178" cy="126" r="2.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="569" cy="63" r="3" fill="#a07a4c" opacity=".26"/>
+      <circle cx="581" cy="50" r="1.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="888" cy="230" r="1.6" fill="#4a321d" opacity=".34"/>
+      <circle cx="246" cy="448" r="2.2" fill="#4a321d" opacity=".18"/>
+      <circle cx="910" cy="147" r="1.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="622" cy="428" r="2.2" fill="#a07a4c" opacity=".18"/>
+      <circle cx="764" cy="292" r="1.6" fill="#a07a4c" opacity=".18"/>
+      <circle cx="888" cy="114" r="3" fill="#4a321d" opacity=".26"/>
+      <circle cx="1188" cy="373" r="3" fill="#4a321d" opacity=".26"/>
+      <circle cx="831" cy="450" r="3" fill="#a07a4c" opacity=".34"/>
+      <circle cx="1146" cy="178" r="1.6" fill="#4a321d" opacity=".18"/>
+      <circle cx="564" cy="165" r="3" fill="#4a321d" opacity=".34"/>
+      <circle cx="575" cy="310" r="1.2" fill="#4a321d" opacity=".34"/>
+      <circle cx="1092" cy="370" r="1.6" fill="#4a321d" opacity=".26"/>
+      <circle cx="521" cy="302" r="1.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="556" cy="352" r="1.2" fill="#4a321d" opacity=".34"/>
+      <circle cx="204" cy="68" r="1.6" fill="#a07a4c" opacity=".34"/>
+      <circle cx="968" cy="77" r="3" fill="#a07a4c" opacity=".34"/>
+      <circle cx="187" cy="262" r="1.2" fill="#4a321d" opacity=".18"/>
+      <circle cx="632" cy="439" r="3" fill="#4a321d" opacity=".18"/>
+      <circle cx="34" cy="108" r="1.6" fill="#a07a4c" opacity=".34"/>
+      <circle cx="311" cy="203" r="1.6" fill="#a07a4c" opacity=".18"/>
+      <circle cx="1077" cy="315" r="3" fill="#4a321d" opacity=".34"/>
+      <circle cx="638" cy="251" r="1.2" fill="#4a321d" opacity=".26"/>
+      <circle cx="730" cy="367" r="1.6" fill="#4a321d" opacity=".18"/>
+      <circle cx="568" cy="344" r="1.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="941" cy="59" r="1.2" fill="#4a321d" opacity=".18"/>
+      <circle cx="332" cy="365" r="3" fill="#4a321d" opacity=".34"/>
+      <circle cx="912" cy="430" r="3" fill="#4a321d" opacity=".26"/>
+      <circle cx="831" cy="218" r="3" fill="#4a321d" opacity=".34"/>
+      <circle cx="839" cy="413" r="2.2" fill="#4a321d" opacity=".34"/>
+      <circle cx="1008" cy="73" r="1.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="379" cy="319" r="3" fill="#4a321d" opacity=".18"/>
+      <circle cx="803" cy="371" r="1.6" fill="#a07a4c" opacity=".34"/>
+      <circle cx="172" cy="416" r="3" fill="#4a321d" opacity=".18"/>
+      <circle cx="478" cy="234" r="1.6" fill="#a07a4c" opacity=".18"/>
+      <circle cx="1193" cy="196" r="3" fill="#a07a4c" opacity=".18"/>
+      <circle cx="382" cy="342" r="1.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="529" cy="18" r="2.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="615" cy="40" r="1.6" fill="#4a321d" opacity=".18"/>
+      <circle cx="319" cy="28" r="1.6" fill="#4a321d" opacity=".26"/>
+      <circle cx="984" cy="401" r="2.2" fill="#4a321d" opacity=".26"/>
+      <circle cx="644" cy="247" r="3" fill="#a07a4c" opacity=".34"/>
+      <circle cx="107" cy="36" r="1.6" fill="#4a321d" opacity=".26"/>
+      <circle cx="323" cy="18" r="1.2" fill="#4a321d" opacity=".26"/>
+      <circle cx="730" cy="112" r="2.2" fill="#a07a4c" opacity=".18"/>
+      <circle cx="14" cy="467" r="3" fill="#4a321d" opacity=".26"/>
+      <circle cx="52" cy="336" r="1.2" fill="#a07a4c" opacity=".18"/>
+      <circle cx="60" cy="103" r="2.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="637" cy="105" r="3" fill="#4a321d" opacity=".34"/>
+      <circle cx="325" cy="380" r="2.2" fill="#4a321d" opacity=".18"/>
+      <circle cx="22" cy="243" r="1.6" fill="#a07a4c" opacity=".34"/>
+      <circle cx="295" cy="216" r="3" fill="#a07a4c" opacity=".34"/>
+      <circle cx="655" cy="419" r="2.2" fill="#4a321d" opacity=".34"/>
+      <circle cx="1179" cy="168" r="1.6" fill="#a07a4c" opacity=".26"/>
+      <circle cx="1178" cy="395" r="1.2" fill="#a07a4c" opacity=".18"/>
+      <circle cx="517" cy="35" r="3" fill="#a07a4c" opacity=".34"/>
+      <circle cx="719" cy="329" r="1.2" fill="#4a321d" opacity=".26"/>
+      <circle cx="189" cy="215" r="2.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="1167" cy="262" r="1.6" fill="#a07a4c" opacity=".18"/>
+      <circle cx="261" cy="94" r="2.2" fill="#4a321d" opacity=".26"/>
+      <circle cx="570" cy="241" r="1.6" fill="#4a321d" opacity=".18"/>
+      <circle cx="109" cy="386" r="1.6" fill="#4a321d" opacity=".26"/>
+      <circle cx="473" cy="148" r="1.6" fill="#4a321d" opacity=".18"/>
+      <circle cx="789" cy="339" r="3" fill="#a07a4c" opacity=".26"/>
+      <circle cx="179" cy="343" r="1.6" fill="#a07a4c" opacity=".18"/>
+      <circle cx="881" cy="384" r="1.6" fill="#4a321d" opacity=".34"/>
+      <circle cx="992" cy="279" r="1.6" fill="#4a321d" opacity=".18"/>
+      <circle cx="50" cy="303" r="1.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="670" cy="299" r="1.6" fill="#a07a4c" opacity=".26"/>
+      <circle cx="4" cy="377" r="1.2" fill="#4a321d" opacity=".34"/>
+      <circle cx="895" cy="228" r="1.2" fill="#4a321d" opacity=".26"/>
+      <circle cx="875" cy="104" r="3" fill="#a07a4c" opacity=".26"/>
+      <circle cx="92" cy="429" r="2.2" fill="#4a321d" opacity=".18"/>
+      <circle cx="93" cy="78" r="2.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="745" cy="71" r="3" fill="#a07a4c" opacity=".18"/>
+      <circle cx="323" cy="319" r="1.6" fill="#a07a4c" opacity=".34"/>
+      <circle cx="349" cy="248" r="3" fill="#a07a4c" opacity=".26"/>
+      <circle cx="921" cy="467" r="1.6" fill="#4a321d" opacity=".26"/>
+      <circle cx="1124" cy="18" r="3" fill="#a07a4c" opacity=".18"/>
+      <circle cx="1193" cy="188" r="1.6" fill="#4a321d" opacity=".18"/>
+      <circle cx="170" cy="251" r="2.2" fill="#a07a4c" opacity=".18"/>
+      <circle cx="1064" cy="334" r="1.6" fill="#a07a4c" opacity=".26"/>
+      <circle cx="473" cy="83" r="3" fill="#a07a4c" opacity=".34"/>
+      <circle cx="487" cy="345" r="3" fill="#a07a4c" opacity=".26"/>
+      <circle cx="379" cy="397" r="1.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="1007" cy="65" r="1.6" fill="#4a321d" opacity=".34"/>
+      <circle cx="1082" cy="143" r="2.2" fill="#a07a4c" opacity=".18"/>
+      <circle cx="468" cy="410" r="1.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="907" cy="403" r="2.2" fill="#4a321d" opacity=".18"/>
+      <circle cx="1002" cy="141" r="1.6" fill="#a07a4c" opacity=".18"/>
+      <circle cx="523" cy="155" r="2.2" fill="#4a321d" opacity=".26"/>
+      <circle cx="974" cy="300" r="1.6" fill="#4a321d" opacity=".34"/>
+      <circle cx="59" cy="347" r="3" fill="#4a321d" opacity=".34"/>
+      <circle cx="773" cy="142" r="1.2" fill="#4a321d" opacity=".34"/>
+      <circle cx="205" cy="201" r="2.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="887" cy="459" r="2.2" fill="#4a321d" opacity=".26"/>
+      <circle cx="361" cy="266" r="3" fill="#4a321d" opacity=".18"/>
+      <circle cx="772" cy="45" r="3" fill="#4a321d" opacity=".34"/>
+      <circle cx="544" cy="163" r="3" fill="#4a321d" opacity=".26"/>
+      <circle cx="657" cy="122" r="1.6" fill="#4a321d" opacity=".26"/>
+      <circle cx="383" cy="179" r="1.6" fill="#a07a4c" opacity=".18"/>
+      <circle cx="459" cy="353" r="1.6" fill="#a07a4c" opacity=".26"/>
+      <circle cx="406" cy="39" r="2.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="151" cy="242" r="1.6" fill="#a07a4c" opacity=".18"/>
+      <circle cx="1076" cy="187" r="3" fill="#a07a4c" opacity=".26"/>
+      <circle cx="1018" cy="412" r="1.2" fill="#4a321d" opacity=".18"/>
+      <circle cx="510" cy="361" r="3" fill="#a07a4c" opacity=".34"/>
+      <circle cx="0" cy="190" r="3" fill="#4a321d" opacity=".26"/>
+      <circle cx="940" cy="113" r="1.6" fill="#4a321d" opacity=".34"/>
+      <circle cx="1130" cy="342" r="3" fill="#4a321d" opacity=".18"/>
+      <circle cx="2" cy="68" r="1.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="1155" cy="298" r="3" fill="#4a321d" opacity=".34"/>
+      <circle cx="119" cy="148" r="1.6" fill="#a07a4c" opacity=".26"/>
+      <circle cx="268" cy="286" r="1.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="1196" cy="138" r="2.2" fill="#4a321d" opacity=".34"/>
+      <circle cx="570" cy="118" r="1.6" fill="#a07a4c" opacity=".18"/>
+      <circle cx="846" cy="151" r="1.2" fill="#a07a4c" opacity=".18"/>
+      <circle cx="1062" cy="308" r="1.2" fill="#4a321d" opacity=".26"/>
+      <circle cx="801" cy="436" r="1.6" fill="#4a321d" opacity=".26"/>
+      <circle cx="835" cy="340" r="2.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="238" cy="377" r="1.2" fill="#a07a4c" opacity=".18"/>
+      <circle cx="1164" cy="153" r="1.6" fill="#a07a4c" opacity=".18"/>
+      <circle cx="266" cy="360" r="2.2" fill="#a07a4c" opacity=".18"/>
+      <circle cx="732" cy="422" r="3" fill="#4a321d" opacity=".26"/>
+      <circle cx="1139" cy="77" r="3" fill="#4a321d" opacity=".18"/>
+      <circle cx="28" cy="284" r="3" fill="#4a321d" opacity=".18"/>
+      <circle cx="221" cy="217" r="2.2" fill="#4a321d" opacity=".34"/>
+      <circle cx="1197" cy="439" r="2.2" fill="#4a321d" opacity=".18"/>
+      <circle cx="783" cy="251" r="3" fill="#a07a4c" opacity=".18"/>
+      <circle cx="797" cy="184" r="2.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="203" cy="11" r="2.2" fill="#a07a4c" opacity=".18"/>
+      <circle cx="504" cy="417" r="1.6" fill="#a07a4c" opacity=".26"/>
+      <circle cx="922" cy="152" r="3" fill="#4a321d" opacity=".18"/>
+      <circle cx="846" cy="100" r="3" fill="#a07a4c" opacity=".18"/>
+      <circle cx="437" cy="423" r="1.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="298" cy="298" r="3" fill="#a07a4c" opacity=".18"/>
+      <circle cx="42" cy="39" r="1.2" fill="#4a321d" opacity=".26"/>
+      <circle cx="897" cy="423" r="2.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="402" cy="449" r="1.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="1109" cy="147" r="1.2" fill="#4a321d" opacity=".18"/>
+      <circle cx="129" cy="339" r="3" fill="#a07a4c" opacity=".26"/>
+      <circle cx="1096" cy="385" r="1.6" fill="#4a321d" opacity=".26"/>
+      <circle cx="10" cy="438" r="2.2" fill="#4a321d" opacity=".34"/>
+      <circle cx="729" cy="161" r="2.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="941" cy="284" r="1.6" fill="#4a321d" opacity=".26"/>
+      <circle cx="297" cy="40" r="1.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="193" cy="206" r="1.2" fill="#a07a4c" opacity=".18"/>
+      <circle cx="750" cy="106" r="3" fill="#a07a4c" opacity=".26"/>
+      <circle cx="208" cy="71" r="3" fill="#4a321d" opacity=".34"/>
+      <circle cx="898" cy="400" r="1.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="335" cy="133" r="2.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="239" cy="124" r="1.6" fill="#4a321d" opacity=".18"/>
+      <circle cx="338" cy="427" r="1.6" fill="#4a321d" opacity=".26"/>
+      <circle cx="475" cy="467" r="1.6" fill="#4a321d" opacity=".34"/>
+      <circle cx="784" cy="466" r="1.2" fill="#a07a4c" opacity=".18"/>
+      <circle cx="1059" cy="116" r="3" fill="#4a321d" opacity=".26"/>
+      <circle cx="1052" cy="117" r="1.2" fill="#4a321d" opacity=".18"/>
+      <circle cx="1116" cy="181" r="1.6" fill="#a07a4c" opacity=".26"/>
+      <circle cx="930" cy="316" r="1.2" fill="#a07a4c" opacity=".18"/>
+      <circle cx="261" cy="180" r="1.6" fill="#4a321d" opacity=".18"/>
+      <circle cx="1200" cy="28" r="1.6" fill="#a07a4c" opacity=".18"/>
+      <circle cx="491" cy="181" r="2.2" fill="#4a321d" opacity=".18"/>
+      <circle cx="38" cy="238" r="3" fill="#a07a4c" opacity=".18"/>
+      <circle cx="122" cy="192" r="1.6" fill="#4a321d" opacity=".34"/>
+      <circle cx="784" cy="193" r="2.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="801" cy="202" r="1.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="497" cy="18" r="2.2" fill="#4a321d" opacity=".34"/>
+      <circle cx="469" cy="196" r="1.2" fill="#4a321d" opacity=".26"/>
+      <circle cx="509" cy="387" r="3" fill="#a07a4c" opacity=".34"/>
+      <circle cx="553" cy="85" r="1.2" fill="#4a321d" opacity=".18"/>
+      <circle cx="769" cy="429" r="1.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="885" cy="89" r="2.2" fill="#4a321d" opacity=".26"/>
+      <circle cx="625" cy="436" r="1.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="904" cy="374" r="1.6" fill="#4a321d" opacity=".26"/>
+      <circle cx="1005" cy="30" r="3" fill="#4a321d" opacity=".26"/>
+      <circle cx="729" cy="303" r="1.2" fill="#4a321d" opacity=".34"/>
+      <circle cx="768" cy="404" r="3" fill="#4a321d" opacity=".34"/>
+      <circle cx="995" cy="94" r="1.6" fill="#a07a4c" opacity=".18"/>
+      <circle cx="1126" cy="82" r="2.2" fill="#4a321d" opacity=".18"/>
+      <circle cx="296" cy="343" r="1.6" fill="#4a321d" opacity=".18"/>
+      <circle cx="801" cy="159" r="3" fill="#a07a4c" opacity=".34"/>
+      <circle cx="660" cy="298" r="2.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="370" cy="125" r="3" fill="#a07a4c" opacity=".34"/>
+      <circle cx="536" cy="212" r="1.2" fill="#a07a4c" opacity=".18"/>
+      <circle cx="558" cy="216" r="3" fill="#a07a4c" opacity=".18"/>
+      <circle cx="480" cy="41" r="2.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="110" cy="213" r="1.2" fill="#4a321d" opacity=".18"/>
+      <circle cx="99" cy="347" r="1.2" fill="#a07a4c" opacity=".18"/>
+      <circle cx="783" cy="371" r="1.2" fill="#4a321d" opacity=".18"/>
+      <circle cx="232" cy="462" r="3" fill="#4a321d" opacity=".26"/>
+      <circle cx="823" cy="342" r="1.6" fill="#a07a4c" opacity=".18"/>
+      <circle cx="733" cy="126" r="2.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="1086" cy="220" r="2.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="250" cy="131" r="1.6" fill="#a07a4c" opacity=".26"/>
+      <circle cx="44" cy="94" r="1.6" fill="#a07a4c" opacity=".34"/>
+      <circle cx="816" cy="422" r="1.6" fill="#4a321d" opacity=".26"/>
+      <circle cx="922" cy="32" r="2.2" fill="#4a321d" opacity=".26"/>
+      <circle cx="302" cy="256" r="3" fill="#a07a4c" opacity=".34"/>
+      <circle cx="318" cy="466" r="1.6" fill="#a07a4c" opacity=".26"/>
+      <circle cx="918" cy="213" r="1.6" fill="#4a321d" opacity=".34"/>
+      <circle cx="356" cy="247" r="2.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="880" cy="354" r="1.6" fill="#a07a4c" opacity=".18"/>
+      <circle cx="739" cy="209" r="2.2" fill="#4a321d" opacity=".18"/>
+      <circle cx="586" cy="292" r="1.2" fill="#4a321d" opacity=".18"/>
+      <circle cx="3" cy="173" r="1.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="641" cy="200" r="2.2" fill="#4a321d" opacity=".34"/>
+      <circle cx="245" cy="297" r="3" fill="#4a321d" opacity=".18"/>
+      <circle cx="17" cy="379" r="1.6" fill="#4a321d" opacity=".26"/>
+      <circle cx="76" cy="77" r="2.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="1161" cy="36" r="2.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="722" cy="248" r="3" fill="#4a321d" opacity=".18"/>
+      <circle cx="1084" cy="30" r="1.2" fill="#4a321d" opacity=".26"/>
+      <circle cx="285" cy="37" r="1.2" fill="#4a321d" opacity=".18"/>
+      <circle cx="171" cy="102" r="3" fill="#4a321d" opacity=".34"/>
+      <circle cx="610" cy="39" r="1.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="858" cy="13" r="3" fill="#a07a4c" opacity=".34"/>
+      <circle cx="97" cy="312" r="1.6" fill="#4a321d" opacity=".18"/>
+      <circle cx="314" cy="306" r="1.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="854" cy="132" r="3" fill="#a07a4c" opacity=".34"/>
+      <circle cx="355" cy="437" r="1.6" fill="#4a321d" opacity=".18"/>
+      <circle cx="204" cy="426" r="1.6" fill="#a07a4c" opacity=".18"/>
+      <circle cx="230" cy="189" r="1.6" fill="#a07a4c" opacity=".26"/>
+      <circle cx="567" cy="254" r="1.2" fill="#a07a4c" opacity=".18"/>
+      <circle cx="1147" cy="118" r="2.2" fill="#a07a4c" opacity=".18"/>
+      <circle cx="747" cy="46" r="1.6" fill="#4a321d" opacity=".18"/>
+      <circle cx="32" cy="59" r="1.6" fill="#4a321d" opacity=".26"/>
+      <circle cx="841" cy="24" r="1.6" fill="#4a321d" opacity=".34"/>
+      <circle cx="836" cy="349" r="1.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="239" cy="449" r="1.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="129" cy="105" r="1.2" fill="#4a321d" opacity=".18"/>
+      <circle cx="1139" cy="429" r="1.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="573" cy="71" r="1.6" fill="#a07a4c" opacity=".26"/>
+      <circle cx="404" cy="130" r="2.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="58" cy="360" r="2.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="1022" cy="294" r="1.2" fill="#4a321d" opacity=".26"/>
+      <g class="farm__tunnels" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M600 -4 C 600 50, 610 90, 600 130"/>
+      <path d="M600 130 C 520 150, 420 120, 330 160 S 250 175, 190 175"/>
+      <path d="M600 130 C 590 200, 520 260, 500 300 S 470 340, 470 365"/>
+      <path d="M600 130 C 640 210, 720 250, 760 300 S 790 330, 790 355"/>
+      <path d="M600 130 C 700 120, 800 160, 880 170 S 960 180, 1030 180"/>
+      <path d="M190 175 C 220 260, 330 330, 470 365"/>
+      <path d="M1030 180 C 1000 260, 900 330, 790 355"/>
+      <path d="M470 365 C 580 400, 680 400, 790 355"/>
+      </g>
+      <g class="farm__rooms">
+      <ellipse cx="190" cy="175" rx="140" ry="62"/>
+      <ellipse cx="470" cy="365" rx="150" ry="62"/>
+      <ellipse cx="790" cy="355" rx="150" ry="62"/>
+      <ellipse cx="1030" cy="180" rx="140" ry="62"/>
+      </g>
+      <g class="farm__trail" fill="none">
+      <path id="t0-largo" d="M600 -4 C 600 50, 610 90, 600 130"/>
+      <path id="t1-largo" d="M600 130 C 520 150, 420 120, 330 160 S 250 175, 190 175"/>
+      <path id="t2-largo" d="M600 130 C 590 200, 520 260, 500 300 S 470 340, 470 365"/>
+      <path id="t3-largo" d="M600 130 C 640 210, 720 250, 760 300 S 790 330, 790 355"/>
+      <path id="t4-largo" d="M600 130 C 700 120, 800 160, 880 170 S 960 180, 1030 180"/>
+      <path id="t5-largo" d="M190 175 C 220 260, 330 330, 470 365"/>
+      <path id="t6-largo" d="M1030 180 C 1000 260, 900 330, 790 355"/>
+      <path id="t7-largo" d="M470 365 C 580 400, 680 400, 790 355"/>
+      </g>
+      <g class="farm__labels" text-anchor="middle">
+      <text x="190" y="173" class="farm__t1" font-size="30">Estratégia</text><text x="190" y="198" class="farm__t2" font-size="17">e consultoria</text>
+      <text x="470" y="363" class="farm__t1" font-size="30">Automação</text><text x="470" y="388" class="farm__t2" font-size="17">comercial</text>
+      <text x="790" y="353" class="farm__t1" font-size="30">Instagram</text><text x="790" y="378" class="farm__t2" font-size="17">e redes</text>
+      <text x="1030" y="178" class="farm__t1" font-size="30">Marca</text><text x="1030" y="203" class="farm__t2" font-size="17">e conteúdo</text>
+      </g>
+      <g class="farm__ants">
+      <use href="#formiga" class="ant"><animateMotion dur="15.6s" begin="-2.4s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="0;1" keyTimes="0;1"><mpath href="#t0-largo"/></animateMotion></use>
+      <use href="#formiga" class="ant"><animateMotion dur="17.3s" begin="-1.2s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="1;0" keyTimes="0;1"><mpath href="#t0-largo"/></animateMotion></use>
+      <use href="#formiga" class="ant"><animateMotion dur="16.7s" begin="-6.1s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="0;1" keyTimes="0;1"><mpath href="#t1-largo"/></animateMotion></use>
+      <use href="#formiga" class="ant"><animateMotion dur="14.3s" begin="-7.3s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="1;0" keyTimes="0;1"><mpath href="#t1-largo"/></animateMotion></use>
+      <use href="#formiga" class="ant"><animateMotion dur="14.2s" begin="-6.2s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="0;1" keyTimes="0;1"><mpath href="#t2-largo"/></animateMotion></use>
+      <use href="#formiga" class="ant"><animateMotion dur="14.3s" begin="-1.3s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="1;0" keyTimes="0;1"><mpath href="#t2-largo"/></animateMotion></use>
+      <use href="#formiga" class="ant"><animateMotion dur="16.1s" begin="-13.3s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="0;1" keyTimes="0;1"><mpath href="#t3-largo"/></animateMotion></use>
+      <use href="#formiga" class="ant"><animateMotion dur="14.6s" begin="-3.3s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="1;0" keyTimes="0;1"><mpath href="#t3-largo"/></animateMotion></use>
+      <use href="#formiga" class="ant"><animateMotion dur="17.1s" begin="-16.2s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="0;1" keyTimes="0;1"><mpath href="#t4-largo"/></animateMotion></use>
+      <use href="#formiga" class="ant"><animateMotion dur="16.9s" begin="-6.7s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="1;0" keyTimes="0;1"><mpath href="#t4-largo"/></animateMotion></use>
+      <use href="#formiga" class="ant"><animateMotion dur="18.9s" begin="-0.9s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="0;1" keyTimes="0;1"><mpath href="#t5-largo"/></animateMotion></use>
+      <use href="#formiga" class="ant"><animateMotion dur="18.3s" begin="-5.3s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="1;0" keyTimes="0;1"><mpath href="#t5-largo"/></animateMotion></use>
+      <use href="#formiga" class="ant"><animateMotion dur="14.7s" begin="-1.7s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="0;1" keyTimes="0;1"><mpath href="#t6-largo"/></animateMotion></use>
+      <use href="#formiga" class="ant"><animateMotion dur="15.5s" begin="-12.7s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="1;0" keyTimes="0;1"><mpath href="#t6-largo"/></animateMotion></use>
+      <use href="#formiga" class="ant"><animateMotion dur="14.9s" begin="-8.7s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="0;1" keyTimes="0;1"><mpath href="#t7-largo"/></animateMotion></use>
+      <use href="#formiga" class="ant"><animateMotion dur="17.2s" begin="-6.4s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="1;0" keyTimes="0;1"><mpath href="#t7-largo"/></animateMotion></use>
+      </g>
+      <path d="M566 0 Q 600 26 634 0" fill="#20160e"/>
+      <defs>
+        <linearGradient id="solo-largo" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#9a7243"/>
+          <stop offset=".55" stop-color="#7d5a33"/>
+          <stop offset="1" stop-color="#6e4c2c"/>
+        </linearGradient>
+      </defs>
+    </svg>
+<svg class="farm__svg farm__svg--estreito" viewBox="0 0 400 700" aria-hidden="true" focusable="false">
+      <rect width="400" height="700" fill="url(#solo-estreito)"/>
+      <circle cx="44" cy="449" r="1.2" fill="#4a321d" opacity=".26"/>
+      <circle cx="251" cy="255" r="3" fill="#4a321d" opacity=".26"/>
+      <circle cx="169" cy="456" r="2.2" fill="#a07a4c" opacity=".18"/>
+      <circle cx="105" cy="632" r="1.6" fill="#4a321d" opacity=".26"/>
+      <circle cx="378" cy="98" r="1.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="209" cy="609" r="3" fill="#a07a4c" opacity=".34"/>
+      <circle cx="68" cy="313" r="2.2" fill="#4a321d" opacity=".34"/>
+      <circle cx="50" cy="329" r="1.6" fill="#4a321d" opacity=".34"/>
+      <circle cx="107" cy="531" r="1.6" fill="#4a321d" opacity=".34"/>
+      <circle cx="390" cy="509" r="2.2" fill="#4a321d" opacity=".18"/>
+      <circle cx="131" cy="141" r="1.2" fill="#4a321d" opacity=".18"/>
+      <circle cx="78" cy="114" r="1.6" fill="#a07a4c" opacity=".26"/>
+      <circle cx="174" cy="145" r="1.2" fill="#4a321d" opacity=".26"/>
+      <circle cx="354" cy="330" r="1.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="277" cy="355" r="2.2" fill="#4a321d" opacity=".26"/>
+      <circle cx="57" cy="427" r="3" fill="#4a321d" opacity=".18"/>
+      <circle cx="363" cy="307" r="3" fill="#4a321d" opacity=".18"/>
+      <circle cx="272" cy="453" r="3" fill="#a07a4c" opacity=".26"/>
+      <circle cx="104" cy="493" r="3" fill="#a07a4c" opacity=".18"/>
+      <circle cx="285" cy="444" r="2.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="182" cy="439" r="3" fill="#4a321d" opacity=".34"/>
+      <circle cx="358" cy="236" r="1.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="363" cy="83" r="2.2" fill="#4a321d" opacity=".34"/>
+      <circle cx="64" cy="549" r="1.6" fill="#a07a4c" opacity=".34"/>
+      <circle cx="40" cy="406" r="1.6" fill="#a07a4c" opacity=".34"/>
+      <circle cx="205" cy="451" r="2.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="164" cy="664" r="1.6" fill="#4a321d" opacity=".34"/>
+      <circle cx="157" cy="536" r="1.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="255" cy="184" r="3" fill="#4a321d" opacity=".26"/>
+      <circle cx="5" cy="299" r="3" fill="#a07a4c" opacity=".34"/>
+      <circle cx="232" cy="85" r="2.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="376" cy="374" r="1.6" fill="#a07a4c" opacity=".26"/>
+      <circle cx="85" cy="99" r="1.2" fill="#4a321d" opacity=".34"/>
+      <circle cx="188" cy="398" r="1.6" fill="#a07a4c" opacity=".18"/>
+      <circle cx="266" cy="583" r="3" fill="#a07a4c" opacity=".26"/>
+      <circle cx="304" cy="458" r="3" fill="#4a321d" opacity=".26"/>
+      <circle cx="107" cy="270" r="2.2" fill="#4a321d" opacity=".26"/>
+      <circle cx="193" cy="566" r="2.2" fill="#4a321d" opacity=".26"/>
+      <circle cx="262" cy="231" r="3" fill="#4a321d" opacity=".26"/>
+      <circle cx="264" cy="260" r="2.2" fill="#4a321d" opacity=".26"/>
+      <circle cx="34" cy="400" r="2.2" fill="#a07a4c" opacity=".18"/>
+      <circle cx="253" cy="20" r="1.2" fill="#4a321d" opacity=".18"/>
+      <circle cx="262" cy="183" r="1.2" fill="#4a321d" opacity=".34"/>
+      <circle cx="342" cy="138" r="3" fill="#4a321d" opacity=".26"/>
+      <circle cx="83" cy="288" r="1.6" fill="#4a321d" opacity=".34"/>
+      <circle cx="267" cy="627" r="2.2" fill="#a07a4c" opacity=".18"/>
+      <circle cx="277" cy="376" r="3" fill="#4a321d" opacity=".34"/>
+      <circle cx="222" cy="193" r="1.6" fill="#a07a4c" opacity=".18"/>
+      <circle cx="197" cy="50" r="3" fill="#a07a4c" opacity=".18"/>
+      <circle cx="99" cy="124" r="1.2" fill="#a07a4c" opacity=".18"/>
+      <circle cx="187" cy="398" r="2.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="170" cy="700" r="1.2" fill="#a07a4c" opacity=".18"/>
+      <circle cx="254" cy="30" r="1.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="323" cy="75" r="3" fill="#4a321d" opacity=".26"/>
+      <circle cx="14" cy="506" r="1.6" fill="#4a321d" opacity=".26"/>
+      <circle cx="345" cy="263" r="3" fill="#4a321d" opacity=".34"/>
+      <circle cx="114" cy="246" r="2.2" fill="#4a321d" opacity=".34"/>
+      <circle cx="331" cy="212" r="3" fill="#a07a4c" opacity=".26"/>
+      <circle cx="201" cy="197" r="2.2" fill="#a07a4c" opacity=".18"/>
+      <circle cx="317" cy="238" r="2.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="51" cy="681" r="1.2" fill="#a07a4c" opacity=".18"/>
+      <circle cx="289" cy="621" r="1.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="43" cy="42" r="3" fill="#4a321d" opacity=".34"/>
+      <circle cx="316" cy="638" r="3" fill="#4a321d" opacity=".34"/>
+      <circle cx="251" cy="491" r="1.2" fill="#4a321d" opacity=".18"/>
+      <circle cx="267" cy="326" r="1.6" fill="#4a321d" opacity=".18"/>
+      <circle cx="348" cy="301" r="1.2" fill="#4a321d" opacity=".34"/>
+      <circle cx="148" cy="578" r="2.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="345" cy="137" r="1.2" fill="#4a321d" opacity=".26"/>
+      <circle cx="172" cy="453" r="1.2" fill="#4a321d" opacity=".26"/>
+      <circle cx="330" cy="544" r="3" fill="#a07a4c" opacity=".34"/>
+      <circle cx="179" cy="20" r="3" fill="#4a321d" opacity=".34"/>
+      <circle cx="190" cy="295" r="1.2" fill="#a07a4c" opacity=".18"/>
+      <circle cx="85" cy="115" r="1.2" fill="#4a321d" opacity=".26"/>
+      <circle cx="4" cy="472" r="1.2" fill="#4a321d" opacity=".18"/>
+      <circle cx="52" cy="22" r="1.6" fill="#4a321d" opacity=".26"/>
+      <circle cx="369" cy="262" r="1.6" fill="#4a321d" opacity=".34"/>
+      <circle cx="117" cy="395" r="3" fill="#a07a4c" opacity=".26"/>
+      <circle cx="365" cy="46" r="1.2" fill="#4a321d" opacity=".18"/>
+      <circle cx="6" cy="459" r="1.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="125" cy="424" r="3" fill="#4a321d" opacity=".34"/>
+      <circle cx="127" cy="665" r="3" fill="#4a321d" opacity=".26"/>
+      <circle cx="58" cy="560" r="2.2" fill="#4a321d" opacity=".34"/>
+      <circle cx="252" cy="298" r="3" fill="#a07a4c" opacity=".26"/>
+      <circle cx="314" cy="401" r="2.2" fill="#4a321d" opacity=".26"/>
+      <circle cx="249" cy="459" r="2.2" fill="#4a321d" opacity=".34"/>
+      <circle cx="333" cy="425" r="2.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="391" cy="180" r="3" fill="#a07a4c" opacity=".34"/>
+      <circle cx="241" cy="628" r="3" fill="#4a321d" opacity=".26"/>
+      <circle cx="129" cy="195" r="1.6" fill="#4a321d" opacity=".34"/>
+      <circle cx="115" cy="107" r="1.6" fill="#a07a4c" opacity=".26"/>
+      <circle cx="139" cy="69" r="3" fill="#4a321d" opacity=".26"/>
+      <circle cx="315" cy="508" r="1.6" fill="#4a321d" opacity=".26"/>
+      <circle cx="271" cy="331" r="1.6" fill="#4a321d" opacity=".26"/>
+      <circle cx="317" cy="327" r="1.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="309" cy="171" r="2.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="191" cy="417" r="1.6" fill="#4a321d" opacity=".18"/>
+      <circle cx="37" cy="566" r="2.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="161" cy="367" r="1.6" fill="#4a321d" opacity=".18"/>
+      <circle cx="369" cy="350" r="1.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="315" cy="118" r="1.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="208" cy="24" r="1.2" fill="#a07a4c" opacity=".18"/>
+      <circle cx="235" cy="157" r="2.2" fill="#4a321d" opacity=".26"/>
+      <circle cx="379" cy="539" r="1.6" fill="#4a321d" opacity=".26"/>
+      <circle cx="136" cy="696" r="3" fill="#4a321d" opacity=".18"/>
+      <circle cx="20" cy="395" r="3" fill="#4a321d" opacity=".26"/>
+      <circle cx="345" cy="451" r="1.2" fill="#4a321d" opacity=".34"/>
+      <circle cx="103" cy="399" r="1.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="73" cy="596" r="2.2" fill="#4a321d" opacity=".18"/>
+      <circle cx="69" cy="660" r="2.2" fill="#4a321d" opacity=".18"/>
+      <circle cx="335" cy="42" r="3" fill="#4a321d" opacity=".18"/>
+      <circle cx="58" cy="531" r="1.6" fill="#a07a4c" opacity=".34"/>
+      <circle cx="236" cy="314" r="1.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="149" cy="279" r="2.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="67" cy="175" r="1.6" fill="#4a321d" opacity=".34"/>
+      <circle cx="187" cy="640" r="1.2" fill="#4a321d" opacity=".18"/>
+      <circle cx="31" cy="437" r="2.2" fill="#4a321d" opacity=".34"/>
+      <circle cx="311" cy="671" r="3" fill="#4a321d" opacity=".18"/>
+      <circle cx="181" cy="244" r="1.6" fill="#4a321d" opacity=".26"/>
+      <circle cx="251" cy="109" r="1.6" fill="#4a321d" opacity=".34"/>
+      <circle cx="72" cy="321" r="1.6" fill="#4a321d" opacity=".26"/>
+      <circle cx="107" cy="294" r="1.6" fill="#a07a4c" opacity=".18"/>
+      <circle cx="228" cy="215" r="1.6" fill="#a07a4c" opacity=".26"/>
+      <circle cx="44" cy="325" r="3" fill="#4a321d" opacity=".18"/>
+      <circle cx="391" cy="49" r="1.6" fill="#a07a4c" opacity=".34"/>
+      <circle cx="334" cy="92" r="1.6" fill="#a07a4c" opacity=".26"/>
+      <circle cx="396" cy="699" r="1.6" fill="#a07a4c" opacity=".18"/>
+      <circle cx="116" cy="628" r="1.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="58" cy="451" r="3" fill="#a07a4c" opacity=".34"/>
+      <circle cx="204" cy="316" r="2.2" fill="#a07a4c" opacity=".18"/>
+      <circle cx="174" cy="639" r="1.6" fill="#4a321d" opacity=".26"/>
+      <circle cx="55" cy="134" r="1.6" fill="#4a321d" opacity=".34"/>
+      <circle cx="79" cy="65" r="1.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="305" cy="131" r="1.6" fill="#4a321d" opacity=".34"/>
+      <circle cx="233" cy="150" r="1.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="336" cy="642" r="2.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="337" cy="607" r="3" fill="#4a321d" opacity=".18"/>
+      <circle cx="164" cy="536" r="1.6" fill="#a07a4c" opacity=".34"/>
+      <circle cx="99" cy="399" r="2.2" fill="#4a321d" opacity=".18"/>
+      <circle cx="281" cy="407" r="1.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="387" cy="59" r="2.2" fill="#4a321d" opacity=".34"/>
+      <circle cx="327" cy="607" r="2.2" fill="#a07a4c" opacity=".34"/>
+      <circle cx="231" cy="630" r="2.2" fill="#a07a4c" opacity=".18"/>
+      <circle cx="179" cy="28" r="1.6" fill="#4a321d" opacity=".18"/>
+      <circle cx="387" cy="164" r="1.6" fill="#4a321d" opacity=".18"/>
+      <circle cx="125" cy="393" r="1.2" fill="#4a321d" opacity=".18"/>
+      <circle cx="371" cy="520" r="2.2" fill="#a07a4c" opacity=".18"/>
+      <circle cx="209" cy="495" r="1.2" fill="#4a321d" opacity=".26"/>
+      <circle cx="287" cy="41" r="1.2" fill="#a07a4c" opacity=".26"/>
+      <circle cx="234" cy="535" r="1.2" fill="#4a321d" opacity=".18"/>
+      <g class="farm__tunnels" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M200 -4 C 200 30, 205 60, 200 80"/>
+      <path d="M200 80 C 170 110, 130 130, 112 170"/>
+      <path d="M112 170 C 170 200, 260 250, 290 310"/>
+      <path d="M290 310 C 250 360, 150 400, 112 460"/>
+      <path d="M112 460 C 170 500, 260 550, 290 610"/>
+      <path d="M200 80 C 260 120, 300 220, 290 310"/>
+      <path d="M112 170 C 60 260, 60 380, 112 460"/>
+      </g>
+      <g class="farm__rooms">
+      <ellipse cx="112" cy="170" rx="92" ry="50"/>
+      <ellipse cx="290" cy="310" rx="92" ry="50"/>
+      <ellipse cx="112" cy="460" rx="92" ry="50"/>
+      <ellipse cx="290" cy="610" rx="92" ry="50"/>
+      </g>
+      <g class="farm__trail" fill="none">
+      <path id="t0-estreito" d="M200 -4 C 200 30, 205 60, 200 80"/>
+      <path id="t1-estreito" d="M200 80 C 170 110, 130 130, 112 170"/>
+      <path id="t2-estreito" d="M112 170 C 170 200, 260 250, 290 310"/>
+      <path id="t3-estreito" d="M290 310 C 250 360, 150 400, 112 460"/>
+      <path id="t4-estreito" d="M112 460 C 170 500, 260 550, 290 610"/>
+      <path id="t5-estreito" d="M200 80 C 260 120, 300 220, 290 310"/>
+      <path id="t6-estreito" d="M112 170 C 60 260, 60 380, 112 460"/>
+      </g>
+      <g class="farm__labels" text-anchor="middle">
+      <text x="112" y="168" class="farm__t1" font-size="24">Estratégia</text><text x="112" y="190" class="farm__t2" font-size="14">e consultoria</text>
+      <text x="290" y="308" class="farm__t1" font-size="24">Automação</text><text x="290" y="330" class="farm__t2" font-size="14">comercial</text>
+      <text x="112" y="458" class="farm__t1" font-size="24">Instagram</text><text x="112" y="480" class="farm__t2" font-size="14">e redes</text>
+      <text x="290" y="608" class="farm__t1" font-size="24">Marca</text><text x="290" y="630" class="farm__t2" font-size="14">e conteúdo</text>
+      </g>
+      <g class="farm__ants">
+      <use href="#formiga" class="ant"><animateMotion dur="12.2s" begin="-9.4s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="0;1" keyTimes="0;1"><mpath href="#t0-estreito"/></animateMotion></use>
+      <use href="#formiga" class="ant"><animateMotion dur="11.7s" begin="-8.3s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="1;0" keyTimes="0;1"><mpath href="#t0-estreito"/></animateMotion></use>
+      <use href="#formiga" class="ant"><animateMotion dur="12.7s" begin="-2.7s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="0;1" keyTimes="0;1"><mpath href="#t1-estreito"/></animateMotion></use>
+      <use href="#formiga" class="ant"><animateMotion dur="14.3s" begin="-1.3s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="1;0" keyTimes="0;1"><mpath href="#t1-estreito"/></animateMotion></use>
+      <use href="#formiga" class="ant"><animateMotion dur="14.1s" begin="-2.4s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="0;1" keyTimes="0;1"><mpath href="#t2-estreito"/></animateMotion></use>
+      <use href="#formiga" class="ant"><animateMotion dur="10.0s" begin="-2.0s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="1;0" keyTimes="0;1"><mpath href="#t2-estreito"/></animateMotion></use>
+      <use href="#formiga" class="ant"><animateMotion dur="13.8s" begin="-13.5s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="0;1" keyTimes="0;1"><mpath href="#t3-estreito"/></animateMotion></use>
+      <use href="#formiga" class="ant"><animateMotion dur="10.0s" begin="-4.9s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="1;0" keyTimes="0;1"><mpath href="#t3-estreito"/></animateMotion></use>
+      <use href="#formiga" class="ant"><animateMotion dur="12.5s" begin="-9.9s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="0;1" keyTimes="0;1"><mpath href="#t4-estreito"/></animateMotion></use>
+      <use href="#formiga" class="ant"><animateMotion dur="10.9s" begin="-5.4s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="1;0" keyTimes="0;1"><mpath href="#t4-estreito"/></animateMotion></use>
+      <use href="#formiga" class="ant"><animateMotion dur="11.7s" begin="-9.8s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="0;1" keyTimes="0;1"><mpath href="#t5-estreito"/></animateMotion></use>
+      <use href="#formiga" class="ant"><animateMotion dur="11.3s" begin="-10.7s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="1;0" keyTimes="0;1"><mpath href="#t5-estreito"/></animateMotion></use>
+      <use href="#formiga" class="ant"><animateMotion dur="11.4s" begin="-2.5s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="0;1" keyTimes="0;1"><mpath href="#t6-estreito"/></animateMotion></use>
+      <use href="#formiga" class="ant"><animateMotion dur="13.5s" begin="-6.7s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="1;0" keyTimes="0;1"><mpath href="#t6-estreito"/></animateMotion></use>
+      </g>
+      <path d="M166 0 Q 200 26 234 0" fill="#20160e"/>
+      <defs>
+        <linearGradient id="solo-estreito" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#9a7243"/>
+          <stop offset=".55" stop-color="#7d5a33"/>
+          <stop offset="1" stop-color="#6e4c2c"/>
+        </linearGradient>
+      </defs>
+    </svg>
+      <figcaption class="farm__cap wrap">Por baixo de uma empresa que cresce com tranquilidade tem um sistema: estratégia, comercial, redes e marca ligados entre si, trabalhando o dia inteiro.</figcaption>
+    </figure>
+  </section>
+
+  <!-- Camada 1: o manifesto e o nome -->
+  <section class="estrato estrato--argila" id="manifesto" aria-labelledby="t-manifesto">
+    <div class="wrap">
+      <h2 class="manifesto" id="t-manifesto">A.N.T. não é sobre fazer mais. É sobre estruturar melhor.</h2>
+      <p class="manifesto__p">Somos uma central de inteligência empresarial: conectamos pessoas, processos e tecnologia para gerar resultado real e dar ao dono liberdade para conduzir o negócio com clareza.</p>
+
+      <ul class="letras" aria-label="O que significa cada letra do nome">
+        <li><span class="letras__l" aria-hidden="true">A</span><h3>Adaptar</h3><p>Entender o mercado, ler os dados e ajustar a estratégia ao momento real do negócio, sem achismo.</p></li>
+        <li><span class="letras__l" aria-hidden="true">N</span><h3>Conectar</h3><p>Ligar pessoas, processos e tecnologia num só sistema, acabando com ruído e retrabalho.</p></li>
+        <li><span class="letras__l" aria-hidden="true">T</span><h3>Prosperar</h3><p>Crescer de forma sustentável, previsível e escalável, com liberdade para o time e para o dono.</p></li>
+      </ul>
     </div>
   </section>
 
-  <!-- Conceito + trilha A.N.T. -->
-  <section class="sec" id="pilares" aria-labelledby="t-pilares">
+  <!-- Camada 2: as quatro câmaras (serviços) -->
+  <section class="estrato estrato--terra" id="servicos" aria-labelledby="t-servicos">
     <div class="wrap">
-      <p class="statement">A.N.T. não é sobre fazer mais. É sobre estruturar melhor.</p>
-      <p class="lead">Somos uma central de inteligência empresarial: conectamos pessoas, processos e tecnologia para gerar resultado real e dar ao dono liberdade para conduzir o negócio com clareza.</p>
-
-      <h2 class="h2" id="t-pilares">Os três pilares do nome</h2>
-      <div class="trail" id="trail">
-        <svg class="trail__path" viewBox="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true"><path d="M40 60 C 200 10, 320 110, 500 60 S 800 10, 960 60"/></svg>
-        <ol class="trail__list">
-        <li class="trail__stop">
-          <span class="trail__letter" aria-hidden="true">A</span>
-          <h3>Adaptar</h3>
-          <p>Entender o mercado, ler os dados e ajustar a estratégia ao momento real do negócio, sem achismo.</p>
-        </li>
-        <li class="trail__stop">
-          <span class="trail__letter" aria-hidden="true">N</span>
-          <h3>Conectar</h3>
-          <p>Ligar pessoas, processos e tecnologia num só sistema, acabando com ruído e retrabalho.</p>
-        </li>
-        <li class="trail__stop">
-          <span class="trail__letter" aria-hidden="true">T</span>
-          <h3>Prosperar</h3>
-          <p>Crescer de forma sustentável, previsível e escalável, com liberdade para o time e para o dono.</p>
-        </li>
-        </ol>
+      <div class="cabeca">
+        <h2 class="h2" id="t-servicos">Quatro frentes, um só sistema</h2>
+        <p class="cabeca__p">Você não contrata peças soltas. Cada entrega se liga ao seu funil e é medida por resultado, não por vaidade.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- Serviços -->
-  <section class="sec sec--line" id="servicos" aria-labelledby="t-servicos">
-    <div class="wrap">
-      <h2 class="h2" id="t-servicos">Quatro frentes, um só sistema</h2>
-      <p class="lead">Você não contrata peças soltas. Cada entrega se liga ao seu funil e é medida por resultado, não por vaidade.</p>
-      <div class="svc">
-        <article class="svc__item">
+      <div class="camaras">
+        <article class="camara">
           <h3>Estratégia e consultoria</h3>
           <p>Diagnóstico do comercial, metas e o roteiro para o negócio crescer de forma previsível.</p>
           <ul class="tags"><li>Diagnóstico</li><li>Metas e indicadores</li><li>Processos</li></ul>
         </article>
-        <article class="svc__item">
+        <article class="camara">
           <h3>Automação comercial</h3>
           <p>CRM, funis e robôs que respondem, qualificam e acompanham os contatos enquanto você cuida do resto.</p>
           <ul class="tags"><li>CRM e funis</li><li>Chatbots</li><li>Integrações</li></ul>
         </article>
-        <article class="svc__item">
-          <h3>Gestão de Instagram e redes</h3>
+        <article class="camara">
+          <h3>Instagram e redes</h3>
           <p>Conteúdo com estratégia, identidade e presença que constroem autoridade, não só curtidas.</p>
           <ul class="tags"><li>Linha editorial</li><li>Design de conteúdo</li><li>Venda pelas redes</li></ul>
         </article>
-        <article class="svc__item">
+        <article class="camara">
           <h3>Marca e conteúdo</h3>
           <p>Posicionamento, narrativa e identidade que fazem a sua marca ser lembrada.</p>
           <ul class="tags"><li>Posicionamento</li><li>Identidade</li><li>Narrativa</li></ul>
@@ -126,12 +652,14 @@
     </div>
   </section>
 
-  <!-- Método -->
-  <section class="sec sec--ink" id="metodo" aria-labelledby="t-metodo">
+  <!-- Camada 3: o método, descendo em etapas -->
+  <section class="estrato estrato--subsolo" id="metodo" aria-labelledby="t-metodo">
     <div class="wrap">
-      <h2 class="h2" id="t-metodo">Do improviso a um comercial que roda sozinho</h2>
-      <p class="lead">O método A.N.T. em quatro etapas, nesta ordem.</p>
-      <ol class="steps">
+      <div class="cabeca">
+        <h2 class="h2" id="t-metodo">Do improviso a um comercial que roda sozinho</h2>
+        <p class="cabeca__p">O método A.N.T. em quatro etapas, sempre nesta ordem.</p>
+      </div>
+      <ol class="descida">
         <li><h3>Diagnóstico</h3><p>Olhamos de perto o comercial, o marketing e a operação para mapear gargalos e oportunidades.</p></li>
         <li><h3>Estrutura</h3><p>Desenhamos os processos, as metas e a organização comercial de que o negócio precisa.</p></li>
         <li><h3>Automação</h3><p>Implantamos CRM, funis e integrações que tiram o operacional das suas costas.</p></li>
@@ -140,17 +668,17 @@
     </div>
   </section>
 
-  <!-- Sobre -->
-  <section class="sec" id="sobre" aria-labelledby="t-sobre">
-    <div class="wrap about">
+  <!-- Camada 4: quem somos -->
+  <section class="estrato estrato--fundo" id="sobre" aria-labelledby="t-sobre">
+    <div class="wrap sobre">
       <div>
         <h2 class="h2" id="t-sobre">Estruturamos empresas para crescer com liberdade</h2>
-        <p class="lead lead--tight">A A.N.T. nasceu para resolver um problema comum nas pequenas e médias empresas: muito esforço e pouco sistema. Trabalhamos como formigas, com organização, conexão e foco coletivo no que faz a empresa prosperar.</p>
-        <p class="body">Conectamos estratégia, processos comerciais e tecnologia num único sistema. Menos achismo, menos operação manual, mais previsibilidade. O resultado é um negócio que cresce sem depender do dono apagando incêndio, com dados, processos claros e automação trabalhando o dia inteiro.</p>
+        <p class="sobre__p">A A.N.T. nasceu para resolver um problema comum nas pequenas e médias empresas: muito esforço e pouco sistema. Trabalhamos como formigas, com organização, conexão e foco coletivo no que faz a empresa prosperar.</p>
+        <p class="sobre__p">Menos achismo, menos operação manual, mais previsibilidade. O resultado é um negócio que cresce sem depender do dono apagando incêndio, com dados, processos claros e automação trabalhando o dia inteiro.</p>
       </div>
       <div>
-        <h3 class="h3">Como pensamos e agimos</h3>
-        <dl class="values">
+        <h3 class="valores__t">Como pensamos e agimos</h3>
+        <dl class="valores">
           <div><dt>Firmes</dt><dd>Falamos com clareza e segurança sobre o que realmente importa.</dd></div>
           <div><dt>Estratégicos</dt><dd>Inteligência de negócio e visão de longo prazo em cada decisão.</dd></div>
           <div><dt>Humanos</dt><dd>Gente que entende de gente para gerar resultado real.</dd></div>
@@ -160,47 +688,36 @@
     </div>
   </section>
 
-  <!-- Contato -->
-  <section class="sec sec--line" id="contato" aria-labelledby="t-contato">
-    <div class="wrap contact">
+  <!-- O fundo do formigueiro: o diagnóstico -->
+  <section class="estrato estrato--fundo contato" id="contato" aria-labelledby="t-contato">
+    <div class="wrap contato__grid">
       <div>
         <h2 class="h2" id="t-contato">Agende seu diagnóstico</h2>
-        <p class="lead lead--tight">30 minutos, sem custo. Você sai com um mapa claro dos gargalos e das oportunidades do seu comercial.</p>
-        <h3 class="h3">O que acontece depois</h3>
-        <ol class="after">
-          <li><strong>Retorno em até 24 horas.</strong> A gente entra em contato para achar o melhor horário.</li>
-          <li><strong>Diagnóstico ao vivo.</strong> Mapeamos juntos os gargalos do seu comercial e do marketing.</li>
-          <li><strong>Plano de ação.</strong> Você recebe os próximos passos, com ou sem a A.N.T.</li>
+        <p class="sobre__p">30 minutos, sem custo. Você sai com um mapa claro dos gargalos e das oportunidades do seu comercial.</p>
+        <h3 class="valores__t">O que acontece depois</h3>
+        <ol class="depois">
+          <li><b>Retorno em até 24 horas.</b> A gente entra em contato para achar o melhor horário.</li>
+          <li><b>Diagnóstico ao vivo.</b> Mapeamos juntos os gargalos do seu comercial e do marketing.</li>
+          <li><b>Plano de ação.</b> Você recebe os próximos passos, com ou sem a A.N.T.</li>
         </ol>
-        <ul class="direct">
-          <li><a href="https://wa.me/5548996795678" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>(48) 99679-5678</a></li>
-          <li><a href="https://www.instagram.com/a.n.t.company/" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg>@a.n.t.company</a></li>
+        <ul class="canais">
+          <li><a data-wa href="https://wa.me/5548996795678" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>(48) 99679-5678</a></li>
+          <li><a href="https://instagram.com/a.n.t.company" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg>@a.n.t.company</a></li>
           <li><a href="mailto:jonas.business0142@gmail.com">jonas.business0142@gmail.com</a></li>
         </ul>
       </div>
 
       <form class="form" id="form" novalidate>
-        <div class="field">
-          <label for="f-nome">Nome</label>
-          <input id="f-nome" name="nome" autocomplete="name" required>
-          <p class="field__err" id="e-nome"></p>
+        <div class="form__row">
+          <div class="field"><label for="f-nome">Nome</label><input id="f-nome" name="nome" type="text" autocomplete="name" required><p class="field__err" id="e-nome"></p></div>
+          <div class="field"><label for="f-empresa">Empresa</label><input id="f-empresa" name="empresa" type="text" autocomplete="organization" required><p class="field__err" id="e-empresa"></p></div>
+        </div>
+        <div class="form__row">
+          <div class="field"><label for="f-email">E-mail</label><input id="f-email" name="email" type="email" autocomplete="email" required><p class="field__err" id="e-email"></p></div>
+          <div class="field"><label for="f-whats">WhatsApp <span>(opcional)</span></label><input id="f-whats" name="whats" type="tel" autocomplete="tel"></div>
         </div>
         <div class="field">
-          <label for="f-empresa">Empresa</label>
-          <input id="f-empresa" name="empresa" autocomplete="organization" required>
-          <p class="field__err" id="e-empresa"></p>
-        </div>
-        <div class="field">
-          <label for="f-email">E-mail</label>
-          <input id="f-email" name="email" type="email" autocomplete="email" required>
-          <p class="field__err" id="e-email"></p>
-        </div>
-        <div class="field">
-          <label for="f-whats">WhatsApp <span class="opt">(opcional)</span></label>
-          <input id="f-whats" name="whats" type="tel" autocomplete="tel" inputmode="tel">
-        </div>
-        <div class="field field--full">
-          <label for="f-fat">Faturamento mensal <span class="opt">(opcional)</span></label>
+          <label for="f-fat">Faturamento mensal <span>(opcional)</span></label>
           <select id="f-fat" name="faturamento">
             <option value="">Prefiro não dizer agora</option>
             <option>Até R$ 50 mil</option>
@@ -209,28 +726,25 @@
             <option>Acima de R$ 500 mil</option>
           </select>
         </div>
-        <div class="field field--full">
-          <label for="f-desafio">Maior desafio hoje <span class="opt">(opcional)</span></label>
-          <textarea id="f-desafio" name="desafio" rows="3" placeholder="Conte rapidamente o que trava o seu crescimento"></textarea>
-        </div>
-        <button class="btn btn--ocre btn--block" type="submit">Pedir diagnóstico pelo WhatsApp</button>
-        <p class="form__note" id="formNote" aria-live="polite">O pedido abre no WhatsApp com os seus dados já escritos. Você revisa e envia.</p>
+        <div class="field"><label for="f-desafio">Maior desafio hoje <span>(opcional)</span></label><textarea id="f-desafio" name="desafio" rows="3" placeholder="Conte rapidamente o que trava o seu crescimento"></textarea></div>
+        <button class="btn btn--ouro btn--block" type="submit"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Pedir diagnóstico pelo WhatsApp</button>
+        <p class="form__note" id="formNote" role="status">O pedido abre no WhatsApp com os seus dados já escritos. Você revisa e envia.</p>
       </form>
     </div>
   </section>
 </main>
 
-<footer class="foot">
-  <div class="wrap foot__in">
+<footer class="rodape">
+  <div class="wrap rodape__in">
     <a class="logo" href="#inicio" aria-label="A.N.T. Company, voltar ao início">
       <svg class="logo__mark" aria-hidden="true"><use href="#i-ant"/></svg>
       <span class="logo__name">A.N.T.<small>Company</small></span>
     </a>
     <p>Estratégia, comercial e tecnologia conectados num só lugar.</p>
-    <p class="foot__copy">© <span id="ano">2026</span> A.N.T. Company</p>
+    <p>© <span id="ano">2026</span> A.N.T. Company</p>
   </div>
 </footer>
 
-<script src="main.js"></script>
+<script src="main.js" defer></script>
 </body>
 </html>
